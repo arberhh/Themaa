@@ -1,0 +1,184 @@
+  //<?php
+               if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+               <?php the_title(); ?>
+                  <?php the_content(); ?>
+              <?php endwhile; else: ?>
+                  <?php _e( 'Sorry, no pages matched your criteria.', 'textdomain' ); ?>
+              <?php endif; ?>
+
+              if($query->have_posts()){
+                  while (have_posts()) {
+                    $post = the_post();
+                    get_attached_media( 'image',$post->id); 
+                    echo '<div class="portfolio-caption">' .
+                    '<h4>' . get_the_title($post->id) . '</h4>';
+                  }
+              }var_dump($query);\
+
+
+
+              <div id="container">
+<div id="row" >
+          <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase">Poosts</h2>
+            <h3 class="section-subheading text-muted">Hereyou can find the posts we've published.</h3>
+          </div>
+        </div>
+        <div class="row">
+<?php
+$btpgid=get_queried_object_id();
+$btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
+$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+$args = array( 'posts_per_page' => 5, 'category_name' => $btmetanm,
+'paged' => $paged,'post_type' => 'post' );
+    $postslist = new WP_Query( $args );
+
+    if ( $postslist->have_posts() ) :
+        while ( $postslist->have_posts() ) : $postslist->the_post(); 
+
+
+            <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal1" class="modalOpen">
+            <div class="portfolio-hover">
+              <div class="portfolio-hover-content">
+                <i class="fas fa-plus fa-3x"></i>
+              </div>
+            </div>
+            <?php echo $querys->post_content; ?>
+            <div class="portfolio-caption">
+              <h4><?php echo $querys->post_title; ?></h4>              
+            </div>
+            </div>
+            <?php } ?>
+         endwhile;  
+
+             next_posts_link( 'Older Entries', $postslist->max_num_pages );
+             previous_posts_link( 'Next Entries &raquo;' ); 
+        wp_reset_postdata();
+    endif;
+    ?>
+
+</div><!-- #content -->
+</div><!-- #container -->
+
+
+
+
+// kodi origjinal 
+ <div class="row">
+          <?php
+          $btpgid = get_queried_object_id();
+          $btmetanm = get_post_meta( $btpgid, 'WP_Catid','true' );
+          $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+
+          $args = array( 
+            'posts_per_page' => 2, 
+            'category_name' => $btmetanm,
+            'paged' => $paged,
+            'post_type' => 'post' 
+          );
+            $wp_query = new WP_Query( $args );
+
+            if ( $wp_query->have_posts() ) :
+                while ( $wp_query->have_posts() ) : $wp_query->the_post(); ?> 
+                    <div class='col-md-4 col-sm-6 portfolio-item'>
+                     <a class='portfolio-link' data-toggle='modal' href='#loadmore' class='modalOpen'>
+                    <div class='portfolio-hover'>
+                      <div class='portfolio-hover-content'>
+                        <i class='fas fa-plus fa-3x'></i>
+                      </div>
+                    </div>
+                    <div class="portfolio-caption">
+                      <h3>
+                        <?php the_title(); ?>
+                      </h3>
+                      <?php the_content(); ?>
+                    </div>  
+                    </div>  
+                <?php endwhile; ?>
+                <?php wp_reset_postdata();
+            endif; ?>
+</div><!-- #content -->
+ <?php
+           if (!is_user_logged_in() ==false){ ?>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal2">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Explore</h4>
+              <p class="text-muted">Graphic Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal3">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Finish</h4>
+              <p class="text-muted">Identity</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal4">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Lines</h4>
+              <p class="text-muted">Branding</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal5">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src="" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Southwest</h4>
+              <p class="text-muted">Website Design</p>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-6 portfolio-item">
+            <a class="portfolio-link" data-toggle="modal" href="#portfolioModal6">
+              <div class="portfolio-hover">
+                <div class="portfolio-hover-content">
+                  <i class="fas fa-plus fa-3x"></i>
+                </div>
+              </div>
+              <img class="img-fluid" src=" alt="">
+            </a>
+            <div class="portfolio-caption">
+              <h4>Window</h4>
+              <p class="text-muted">Photography</p>
+            </div>
+          </div>
+        </div>
+      </div>
+           </section>
+        <?php } ?>
+
+
+
+
+                    <?php wp_list_categories(); ?>
