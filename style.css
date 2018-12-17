@@ -94,6 +94,7 @@ body{
   #navMenu{
     background-color:#212529;
   }
+
   #navMenu .navbar-toggler{
     font-size:12px;
     right:0;
@@ -152,7 +153,8 @@ body{
   }
   .padding{
   padding-bottom: 2rem;
-}
+  }
+
   header.masthead{
     text-align:center;
     color:#fff;
@@ -613,12 +615,16 @@ body{
   .card-price{
     color:#212529;
   }
-  .social-buttons li a {
-    padding: 1rem;
-  } 
+
   /* Form style */
 
   tr {
     border-bottom: 1px solid #212529;
   }
-  
+ 
+  table{
+    padding: 2rem;
+  }
+li {
+  display: list-item;
+}

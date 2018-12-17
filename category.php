@@ -21,7 +21,7 @@ var page = 1;
 var category = "<?php echo $category_id ?>";
 // jquery infinite setup
 $(window).scroll(function() {
-    if ($(window).scrollTop() == $(window).height() - $(document).height()) {
+    if ($(window).scrollTop() == $(document).height() - $(window).height()) {
         var data = {
             'action': 'category',
             'page': page,
