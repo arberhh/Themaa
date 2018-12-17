@@ -1,15 +1,15 @@
 <?php
 /*
-    Template Name: monthlyArchives 
+    Template Name: Categories
 */ 
 
 get_header(); ?>
 
         <div class="jumbotron">
 	    <div class="container" role="main">
-            <ul class="list-group">
+            <div class="list-group">
                 <?php wp_list_categories(); ?>
-            </ul>
+            </div>
             <!--             
             <h2>Archives by Subject:</h2>
             <ul>

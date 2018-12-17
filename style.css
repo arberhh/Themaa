@@ -158,11 +158,14 @@ body{
   header.masthead{
     text-align:center;
     color:#fff;
-    background-image:url("img/header-bg.jpg");
+    background-image:url("img/newsletter.jpg");
     background-repeat:no-repeat;
     background-attachment:scroll;
     background-position:center center;
     background-size:cover;
+  }
+  .masthead img {
+    height: 650px;
   }
   /* .myClass{
     text-align:center;
@@ -625,6 +628,22 @@ body{
   table{
     padding: 2rem;
   }
+
 li {
   display: list-item;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-transform: full-width;
+}
+@media (max-width: 576px) {
+  .intro-lead-in   {
+    font-size: 250%;
+  }
+.intro-heading {
+    font-size: 110%;
+  }
+.masthead .btn{
+  font-size:90%;
+  padding: 4px 8px;
+}
 }

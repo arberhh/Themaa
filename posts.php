@@ -8,8 +8,8 @@ get_header(); ?>
 <div id="container">
         <div id="row" >
           <div class="col-lg-12 text-center">
-            <h2 class="section-heading text-uppercase">Poosts</h2>
-            <h3 class="section-subheading text-muted">Hereyou can find the posts we've published.</h3>
+            <h2 class="section-heading text-uppercase">All Posts</h2>
+            <h3 class="section-subheading text-muted">Here you can find all the items we've published.</h3>
           </div>
         </div>
    

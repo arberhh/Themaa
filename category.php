@@ -1,12 +1,23 @@
 <?php get_header(); ?>
-
+<?php 
+    $categories = get_the_category();   
+    $category_id = $categories[0]->cat_ID;
+?>
+<br>
+<div class="container">
+</div>
 <section class="bg-light" id="portfolio">
     <div id="container">
-        <div class="row posts">
+        <div id="row" ></div>
+            <div class="col-lg-12 text-center">
+            <h2 class="section-heading text-uppercase"></h2>
+            <h3 class="section-subheading text-muted">Scroll to load more from the <?php echo single_cat_title(); ?> category .</h3>
+            </div>
+        </div>
+        <div class="row posts">  
         <?php
         // get the current category id  
-        $categories = get_the_category();   
-        $category_id = $categories[0]->cat_ID;
+
         // $paged = $_POST["page"];
         // wp query parameters
         ?>

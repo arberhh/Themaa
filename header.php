@@ -22,7 +22,7 @@
   <!-- Custom styles and scripts for this template -->
   <link href="<?php bloginfo('stylesheet_url'); ?>" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.js"></script>
 
 </head>
 
@@ -50,7 +50,7 @@
         <div class="intro-lead-in">Welcome To Our Newsletter!</div>
         <div class="intro-heading text-uppercase">It's Nice To Meet You</div>
         <a class="btn btn-primary btn-xl text-uppercase" href="wordpress/membership-account/membership-levels/">Subscribe!</a>
-        <a class="btn btn-primary btn-xl text-uppercase" href="<?php echo wp_login_url(); ?>">&nbsp;&nbsp;&nbsp;Log  in! &nbsp;&nbsp;&nbsp;&nbsp;</a>
+        <a class="btn btn-primary btn-xl text-uppercase" href="<?php echo wp_login_url(); ?>">&nbsp;&nbsp;&nbsp;Log  in!&nbsp;&nbsp;&nbsp;&nbsp;</a>
       </div>
     </div>
   </header>

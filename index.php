@@ -126,7 +126,7 @@ get_header(); ?>
               <hr>
               <h1 class="card-text card-price">30.00&dollar;</h1>
               <hr>
-              <p class="card-text">Monthly Subscription</p>
+              <p class="card-text">3 Months Subscription</p>
               <hr>
               <p class="card-text"> - </p>
               <hr>
@@ -134,7 +134,7 @@ get_header(); ?>
               <hr>
               <p class="card-text">Help 24/7/365</p>
               <hr>
-              <a href="smembership-account/membership-checkout/?level=4" class="btn btn-primary">Subscribe now</a>		
+              <a href="membership-account/membership-checkout/?level=4" class="btn btn-primary">Subscribe now</a>		
             </div>
           </div>
       </div>
@@ -147,7 +147,7 @@ get_header(); ?>
           <hr>
           <h1 class="card-text card-price">60.00&dollar;</h1>
           <hr>
-          <p class="card-text">Monthly Subscription</p>
+          <p class="card-text">6 Months Subscription</p>
           <hr>
           <p class="card-text"> - </p>
           <hr>
