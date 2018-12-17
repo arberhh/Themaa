@@ -73,7 +73,7 @@ get_header(); ?>
     if ($wp_query->have_posts()) : ?>
       <?php while ($wp_query->have_posts()) : $wp_query->the_post(); ?> 
             <div class='col-md-4 col-sm-6 portfolio-item'>
-              <a class='portfolio-link' data-toggle='modal' href='<?php echo get_permalink(); ?>' class='modalOpen'>
+            <a class='portfolio-link' href='<?php echo get_permalink(); ?>'>
             <div class='portfolio-hover'>
               <div class='portfolio-hover-content'>
                 <i class='fas fa-plus fa-3x'></i>
